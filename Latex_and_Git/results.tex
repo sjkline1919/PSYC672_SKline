@@ -1,56 +1,47 @@
 \section{Results}
-Here is where you will describe your significant results. Typically, you will place a number of figures in the results section to illustrate your findings. For example, I tried to use TiKZ to create a simple illustration of the factor structure of general intelligence, but I don't think it's very good (see Figure~\ref{fig:TikZmodel}).
-
+This is the data analysis plan for this study. This section also includes figures from my first year project that can outline the current direction of my thesis. 
+\begin{itemize}
+	\item Once data collection is complete, the data will be cleaned and processed using standard protocol. Data will be processed in EEGLab via MATLAB. Difference waveforms will be calculated by subtracting the conflict conditions (SCFI, SIFC and SIFI) from SCFC.
+	\item These difference waveforms will be used to extract pure conflict processing activity and remove other irrelevant mental processes. 
+	\item Planned statistical analyses include repeated-measures ANOVA for the different variables including LRP, P3 and reaction time. Additionally, linear mixed models will be used to test the interactions between P3 and LRP across different conflicts and conditions. Analyses will also incorporate AUDIT and I-8 scores to examine differences between heavy drinkers and highly impulsive individuals from healthy controls. 
+	\item The main analysis may simplify by focusing on Equal condition and SIFI, but exploratory analyses (TBD) will determine how AUDIT and I-8 scores relate to the different conflicts and conditions. 
+	\item The base for my thesis will be an expanded version of the theoretical model of my FYP.
+\end{itemize}
 \begin{figure}[ht!]
 \centering
-\begin{tikzpicture}[scale=.5,transform shape,auto,node distance=.9cm,
-latent/.style={circle,draw,very thick,inner sep=0pt,minimum size=25mm,align=center},
-manifest/.style={rectangle,draw,very thick,inner sep=0pt,minimum width=30mm,minimum height=10mm},
-paths/.style={->, ultra thick, >=stealth'}]
-\node [manifest] (SI) at (0,0) {Similarities};
-\node [manifest] (VO) [below=of SI] {Vocabulary};
-\node [manifest] (CO) [below=of VO] {Comprehension};
-\node [manifest] (IN) [below=of CO] {Information};
-\node [manifest] (WR) [below=of IN] {Word Reasoning};
-\node [manifest] (BD) [below=of WR] {Block Design};
-\node [manifest] (PS) [below=of BD] {Picture Concepts};
-\node [latent] (g) [left=2.5cm of IN] {\emph{g}};
-\node [latent] (Gc) [right=4.5cm of CO] {Verbal\\ Comprehension};
-\node [latent] (Gv) [right=4.5cm of BD] {Visual\\ Spatial};
-\foreach \all in {SI, VO, CO, IN, WR, BD, PS}
-{
-\draw [paths] (g.east) to node { } (\all.west);
-}
-\foreach \vc in {SI, VO, CO, IN, WR}
-\draw [paths] (Gc.west) to node {} (\vc.east);
-\foreach \vs in {BD, PS}
-\draw [paths] (Gv.west) to node {} (\vs.east);
-\draw [paths, <->] (Gc) edge[bend left] node [left] {} (Gv);
+\begin{tikzpicture}
+\usetikzlibrary{positioning}
+\node [draw, align=center, minimum width=2cm, minimum height=2cm, inner sep=2pt] (CC) at (0,0) {Cognitive\\ Control};
+\node [draw, align=center, minimum width=2cm, minimum height=2cm, inner sep=2pt] (RT) [below right=of CC] {Reaction\\ Time};
+\node [draw, align=center, minimum width=2cm, minimum height=2cm, inner sep=2pt] (LRP) [below left=of CC] {Automatic \\ Response};
+\path[->,thick](LRP)edge(RT);
+\path (LRP) -- (RT) coordinate[midway] (midpoint);
+\draw [->,thick](CC) -- (midpoint);
 \end{tikzpicture}
-\caption{\label{fig:TikZmodel} Here is a sample of a TikZ model.}
+\caption{Here is the theoretical model that my thesis will be expanding.}
+\label{fig:FYP} 
 \end{figure}
 
-In other cases, you might have an image file you want to bring into your document.  That is pretty easy to do as well as you can see in Figure \ref{fig:gearhead}.
-
-\begin{figure}[h!] 
+\begin{figure}[htbp] 
 \centering
-\includegraphics[width=0.3\textwidth]{frog.jpeg}
-\caption{\label{fig:gearhead}This is a another figure caption.}
+\includegraphics[width=0.8\textwidth]{totalfigs_copy}
+\caption{Here are some figures for my P3b and LRP data}
+\label{fig:ERPs}
 \end{figure}
-
-Sometimes You may also want to display some tabular data in order to illustrate patterns in your data. Fortunately, You can do this right in \LaTeX.
 
 \begin{table}[h!]
 \centering
-\caption{\label{tab:RTmeans}Reaction times over training in the experimental and control groups.}
+\caption{\label{tab:RTmeans}Reaction times for different Simon-Flanker conflict and PC effect conditons.}
 \begin{tabular}{l l c c c}
  \toprule
-                          &              & \multicolumn{3}{c}{Week}\\
+                          &              & \multicolumn{3}{c}{Condition, seconds}\\
   \cmidrule{3-5}
-                          &              & {One}           & {Two}           & {Three}\\
+                          &              & {Equal}           & {Incongruent}           & {Congruent}\\
   \cmidrule{3-5}
-  \multirow{ 2}{*}{Group} & Experimental &     1008.435    &      986.76     &      859.1     \\
-                          & Control      &     996.23      &      901.67     &      1002.23   \\
+  \multirow{ 4}{*}{Conflict} & SCFC &     0.595    &      0.603     &      0.585     \\
+                          & SCFI      &     0.654      &      0.671     &      0.639   \\
+                          & SIFC     &     0.624     &     0.621     &     0.641     \\
+                          & SIFI     &      0.712    &     0.703     &     0.716    \\
   \bottomrule
  \end{tabular}
 \end{table}

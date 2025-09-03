@@ -1,0 +1,49 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Diamond%
+}{%
+Diamond%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+diamond13}
+\APACinsertmetastar {%
+diamond13}%
+\begin{APACrefauthors}%
+Diamond, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Executive Functions} {Executive functions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Annual Review of Psychology}{64}{}{135--168}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tan%
+}{%
+Tan%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+tan12}
+\APACinsertmetastar {%
+tan12}%
+\begin{APACrefauthors}%
+Tan, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Through the drinking glass: An analysis of the cultural
+  meanings of college drinking} {Through the drinking glass: An analysis of the
+  cultural meanings of college drinking}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Youth Studies}{15}{1}{119-142}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
